@@ -42,6 +42,5 @@ $ ./ip_sanitize
 ### Code Analyzer
 To analyze source and binary files
 ```
-$ g++ -std=c++11 code_analyzer.cpp -o code_analyzer
-$ ./code_analyzer <filename>
+$ python CodeAnalyzer.py
 ```
