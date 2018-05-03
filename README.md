@@ -42,5 +42,5 @@ $ ./ip_sanitize
 ### Code Analyzer
 To analyze source and binary files
 ```
-$ python CodeAnalyzer.py
+$ python CodeAnalyzer.py sample_c
 ```
