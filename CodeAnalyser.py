@@ -2,7 +2,7 @@ import re
 import os
 import sys
 
-vulnerableFunctions = ['strcpy','gets','puts','scanf','printf','fopen','fputs','system']
+vulnerableFunctions = ['strcpy','gets','puts','scanf','printf','fopen','fputs','system','execve','access']
 
 def findFunctionsInBinary(file):
 	funcAddr = {}
@@ -42,19 +42,6 @@ def findVulnerablefunction(line,num):
 		pattern = re.compile(func)
 		if re.search(pattern,func) != None:
 			print "Found " + func + " on line number " + str(num) 
-
-
-
-# filename = "api.py"
-# file = open(filename,"r")
-
-# with open(filename) as file:
-# 	for num, line in enumerate(file,1):
-# 		line = line.strip()
-# 		# print num, line
-# 		if line:
-# 			findVulnerablefunction(line,num)
-
 
 funcAddr = findFunctionsInBinary(sys.argv[1])
 print funcAddr
