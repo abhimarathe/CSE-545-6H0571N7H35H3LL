@@ -25,4 +25,22 @@ This script will one command-line argument, the path of the php file. There is a
 ```
 $ python phpVulnerabilityFinder.py phpVuln.php
 ```
+### Shellcode Generator
+To generate shellcode for x86_32
+```
+$ g++ -std=c++11 shellcode_generator.cpp -o shellcode_gen
+$ ./shellcode_gen
+```
 
+### Input Sanitizer
+To sanitize user input
+```
+$ g++ -std=c++11 input_sanitization.cpp -o ip_sanitize
+$ ./ip_sanitize
+```
+
+### Code Analyzer
+To analyze source and binary files
+```
+$ python CodeAnalyzer.py
+```
