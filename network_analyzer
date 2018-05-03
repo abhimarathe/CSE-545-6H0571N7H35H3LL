@@ -1,0 +1,17 @@
+#!/bin/bash
+set -v
+done=0
+while [ $done == 0 ]
+do
+timestamp=$(date +%s)
+echo $timestamp
+filename="tcp_$timestamp.pcap"
+tcpdump -w $filename & sleep 3
+pid=$!
+echo "PID :$pid"
+sleep 2
+kill -9 $pid
+lines=`tcpdump -Ann -r $filename 'src port 20002' | grep -n 'FLG' `
+if [ "$lines" == "0" ]; then echo "no FLAG"
+fi
+done
