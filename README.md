@@ -3,7 +3,7 @@ This repository contains tools we designed for attack and defense CTF.
 ### Network_analyzer
 To run network_analyzer script, run the network_analyzer script. It will generate pcap files.
 ```
-$ network_analyzer
+$ ./network_analyzer
 ```
 ### Command-line-injection
 command-line-injection script will take url, port, command to inject as parameters.
@@ -21,7 +21,7 @@ This script will take two command-line arguments, the path of the binary and the
 $ python findRopGadget.py --filename sample_c --instructions mov,pop,xor,inc
 ```
 ### PHP Vulnerability Finder
-This script will one command-line argument, the path of the php file. There is a sample phpVuln.py provided to test the following script.
+This script will take one command-line argument, the path of the php file. There is a sample phpVuln.py provided to test the following script.
 ```
 $ python phpVulnerabilityFinder.py phpVuln.php
 ```
